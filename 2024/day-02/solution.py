@@ -37,11 +37,6 @@ def part2(file_name: str) -> int:
     )
 
 
-for line in read_file():
-    for e in tolerate_bad_level(line):
-        print(e)
-
-
 if __name__ == "__main__":
     print("part1 solution:", part1("input.txt"))
     print("part2 solution:", part2("input.txt"))
