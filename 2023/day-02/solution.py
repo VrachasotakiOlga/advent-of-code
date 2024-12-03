@@ -10,7 +10,7 @@ def parse_game_id(line: str) -> int:
     p = re.compile(r"^Game (\d+)")
     m = p.match(line)
     if m is None:
-        raise ValueError("Niai kalia")
+        raise ValueError("No match")
 
     return int(m.group(1))
 
@@ -29,7 +29,7 @@ def parse_cubeset(string: str) -> tuple[int, int, int]:
             case "blue":
                 res[2] = num
             case _:
-                raise ValueError("xiagapo Oga mou")
+                raise ValueError("No match")
 
     assert len(res) == 3
     return tuple(res)  # type: ignore
