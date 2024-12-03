@@ -31,7 +31,7 @@ def parse_scratchcards(scratchcards_raw: list[str]) -> list[ScratchCard]:
         m = c.match(line)
 
         if m is None:
-            raise ValueError("Xie agapw Oga mou <3")
+            raise ValueError("No match")
 
         id_ = int(m.group(1))
         winning_nums = {int(x) for x in m.group(2).split()}
